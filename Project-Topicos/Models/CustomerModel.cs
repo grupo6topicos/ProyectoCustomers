@@ -67,7 +67,7 @@ namespace Model
             {
                 String query = "SELECT c.[CustomerID],c.[FistName],c.[LastName],c.[PersonType],c.[StoreName],a.[AddressID],a.[Address1],a.[Address2],a.[City],a.[Province] ,a.[Country] " +
                                 "FROM [dbo_Customers].[dbo].[CustomerAddress] cs LEFT JOIN [dbo_Customers].[dbo].[Customers] c ON cs.CustomerID = c.CustomerID " +
-                                "LEFT JOIN [dbo_Customers].[dbo].[Address] a ON cs.AddressID = a.AddressID WHERE a.[Country] = @Country ";
+                                "LEFT JOIN [dbo_Customers].[dbo].[Address] a ON cs.AddressID = a.AddressID WHERE a.[Country] = @Country";
                 System.Data.SqlClient.SqlCommand sqlcmd = new System.Data.SqlClient.SqlCommand(query, this.GetObjConexion());
                 sqlcmd.Parameters.AddWithValue("@Country", Country);
                 sqlcmd.CommandType = CommandType.Text;

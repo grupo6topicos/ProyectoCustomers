@@ -6,13 +6,17 @@
             <asp:DropDownList ID="ddlType" runat="server" OnSelectedIndexChanged="ddlType_SelectedIndexChanged" AutoPostBack="True">
                 <asp:ListItem Text="Select Type" Value="0"></asp:ListItem>
                 <asp:ListItem Text="Country" Value="1"></asp:ListItem>
-                <asp:ListItem Text="City" Value="2"></asp:ListItem>
-                <asp:ListItem Text="Country and City" Value="3"></asp:ListItem>
+                <asp:ListItem Text="Province" Value="2"></asp:ListItem>
+                <asp:ListItem Text="City" Value="3"></asp:ListItem>
             </asp:DropDownList>
         </div>
 
         <div id="div_DDLCountry">
             <asp:DropDownList ID="ddlCountry" runat="server" OnSelectedIndexChanged="ddlCountry_SelectedIndexChanged"></asp:DropDownList>
+        </div>
+
+        <div id="div_DDLProvince">
+            <asp:DropDownList ID="DropDownList1" runat="server" OnSelectedIndexChanged="ddlProvince_SelectedIndexChanged"></asp:DropDownList>
         </div>
 
         <div id="div_DDLCity">
