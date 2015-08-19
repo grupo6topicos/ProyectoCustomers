@@ -28,7 +28,7 @@ namespace Model
             SqlDataReader reader = null;
             try
             {
-                String query =  "SELECT c.[CustomerID],c.[FistName],c.[LastName],c.[PersonType],c.[StoreName],a.[AddressID],a.[Address1],a.[Address2],a.[City],a.[Province] ,a.[Country] " +
+                String query =  "SELECT c.[CustomerID],c.[FistName],c.[LastName],a.[AddressID],a.[Address1],a.[City],a.[Province],a.[Country] " +
                                 "FROM [dbo_Customers].[dbo].[CustomerAddress] cs LEFT JOIN [dbo_Customers].[dbo].[Customers] c ON cs.CustomerID = c.CustomerID " +
                                 "LEFT JOIN [dbo_Customers].[dbo].[Address] a ON cs.AddressID = a.AddressID  ";
                 System.Data.SqlClient.SqlCommand sqlcmd = new System.Data.SqlClient.SqlCommand(query, this.GetObjConexion());
@@ -65,7 +65,7 @@ namespace Model
             SqlDataReader reader = null;
             try
             {
-                String query = "SELECT c.[CustomerID],c.[FistName],c.[LastName],c.[PersonType],c.[StoreName],a.[AddressID],a.[Address1],a.[Address2],a.[City],a.[Province] ,a.[Country] " +
+                String query = "SELECT c.[CustomerID],c.[FistName],c.[LastName],a.[AddressID],a.[Address1],a.[City],a.[Province],a.[Country] " +
                                 "FROM [dbo_Customers].[dbo].[CustomerAddress] cs LEFT JOIN [dbo_Customers].[dbo].[Customers] c ON cs.CustomerID = c.CustomerID " +
                                 "LEFT JOIN [dbo_Customers].[dbo].[Address] a ON cs.AddressID = a.AddressID WHERE a.[Country] = @Country";
                 System.Data.SqlClient.SqlCommand sqlcmd = new System.Data.SqlClient.SqlCommand(query, this.GetObjConexion());
@@ -103,7 +103,7 @@ namespace Model
             SqlDataReader reader = null;
             try
             {
-                String query = "SELECT c.[CustomerID],c.[FistName],c.[LastName],c.[PersonType],c.[StoreName],a.[AddressID],a.[Address1],a.[Address2],a.[City],a.[Province] ,a.[Country] " +
+                String query = "SELECT c.[CustomerID],c.[FistName],c.[LastName],a.[AddressID],a.[Address1],a.[City],a.[Province],a.[Country] " +
                                 "FROM [dbo_Customers].[dbo].[CustomerAddress] cs LEFT JOIN [dbo_Customers].[dbo].[Customers] c ON cs.CustomerID = c.CustomerID " +
                                 "LEFT JOIN [dbo_Customers].[dbo].[Address] a ON cs.AddressID = a.AddressID WHERE a.[Province] = @Province ";
                 System.Data.SqlClient.SqlCommand sqlcmd = new System.Data.SqlClient.SqlCommand(query, this.GetObjConexion());
@@ -141,7 +141,7 @@ namespace Model
             SqlDataReader reader = null;
             try
             {
-                String query = "SELECT c.[CustomerID],c.[FistName],c.[LastName],c.[PersonType],c.[StoreName],a.[AddressID],a.[Address1],a.[Address2],a.[City],a.[Province] ,a.[Country] " +
+                String query = "SELECT c.[CustomerID],c.[FistName],c.[LastName],a.[AddressID],a.[Address1],a.[City],a.[Province],a.[Country] " +
                                 "FROM [dbo_Customers].[dbo].[CustomerAddress] cs LEFT JOIN [dbo_Customers].[dbo].[Customers] c ON cs.CustomerID = c.CustomerID " +
                                 "LEFT JOIN [dbo_Customers].[dbo].[Address] a ON cs.AddressID = a.AddressID WHERE a.[City] = @City ";
                 System.Data.SqlClient.SqlCommand sqlcmd = new System.Data.SqlClient.SqlCommand(query, this.GetObjConexion());
