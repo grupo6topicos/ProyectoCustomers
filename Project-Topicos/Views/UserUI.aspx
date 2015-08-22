@@ -25,7 +25,7 @@
                         <asp:DropDownList ID="ddlProvince" runat="server" OnSelectedIndexChanged="ddlProvince_SelectedIndexChanged" AutoPostBack="True"></asp:DropDownList>
                         <br />
                     </div>
-                    <div class="Feature" id="city" runat="server">
+                    <div class="feature" id="city" runat="server">
                         <asp:Label ID="lbCity" runat="server" Text="City"></asp:Label>
                         <asp:DropDownList ID="ddlCity" runat="server" OnSelectedIndexChanged="ddlCity_SelectedIndexChanged" AutoPostBack="True"></asp:DropDownList>
                         <br />
